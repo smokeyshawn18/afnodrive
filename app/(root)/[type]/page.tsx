@@ -19,7 +19,10 @@ const Page = async ({ searchParams, params }: SearchParamProps) => {
 
         <div className="total-size-section">
           <p className="body-1">
-            Total: <span className="h5">0 MB</span>
+            Total:{" "}
+            <span className="h5">
+              {files.total > 0 ? `${files.total} MB` : "0 MB"}
+            </span>
           </p>
 
           <div className="sort-container">

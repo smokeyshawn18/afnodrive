@@ -5,7 +5,7 @@ import Image from "next/image";
 import { navItems } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { File } from "lucide-react";
+import { Database } from "lucide-react";
 
 interface Props {
   fullName: string;
@@ -19,8 +19,8 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
   return (
     <aside className="sidebar">
       <Link href="/" className="flex items-center gap-2">
-        <File className="w-10 h-10  rounded-xl" />
-        <span className="text-teal-400 font-bold uppercase text-2xl tracking-wide">
+        <Database color="white" className="w-10 h-10  rounded-xl" />
+        <span className="text-white font-bold uppercase text-2xl tracking-wide">
           AfnoDrive
         </span>
       </Link>

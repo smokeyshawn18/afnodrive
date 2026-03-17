@@ -1,18 +1,18 @@
 import React from "react";
 import Image from "next/image";
+import { Database } from "lucide-react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex min-h-screen">
       <section className="hidden w-1/2 items-center justify-center bg-brand p-10 lg:flex xl:w-2/5">
         <div className="flex max-h-[800px] max-w-[430px] flex-col justify-center space-y-12">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            alt="logo"
-            width={224}
-            height={82}
-            className="h-auto"
-          />
+          <div className="flex items-center space-x-4">
+            <Database color="white" className="w-10 h-10  rounded-xl" />
+            <span className="text-white font-bold uppercase text-2xl tracking-wide">
+              AfnoDrive
+            </span>
+          </div>
 
           <div className="space-y-5 text-white">
             <h1 className="h1">Manage your files the best way</h1>
