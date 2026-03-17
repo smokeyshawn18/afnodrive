@@ -18,7 +18,10 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
 
   return (
     <aside className="sidebar">
-      <Link href="/" className="flex items-center gap-2">
+      <Link
+        href="/"
+        className="flex items-center gap-2 bg-teal-500 rounded-xl px-2 py-2"
+      >
         <Database color="white" className="w-10 h-10  rounded-xl" />
         <span className="text-white font-bold uppercase text-2xl tracking-wide">
           AfnoDrive

@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Separator } from "@radix-ui/react-separator";
 import { navItems } from "@/constants";
@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import FileUploader from "@/components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
+import { Database } from "lucide-react";
 
 interface Props {
   $id: string;
@@ -37,13 +38,12 @@ const MobileNavigation = ({
 
   return (
     <header className="mobile-header">
-      <Image
-        src="/assets/icons/logo-full-brand.svg"
-        alt="logo"
-        width={120}
-        height={52}
-        className="h-auto"
-      />
+      <Link href="/" className="flex items-center gap-2  rounded-xl px-2 py-2">
+        <Database color="black" className="w-6 h-6  rounded-xl" />
+        <span className="text-teal-500 font-bold uppercase text-lg tracking-wide">
+          AfnoDrive
+        </span>
+      </Link>
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
